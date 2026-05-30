@@ -13,7 +13,6 @@ import io.ncbpfluffybear.fluffymachines.items.tools.WateringCan;
 import io.ncbpfluffybear.fluffymachines.machines.AlternateElevatorPlate;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -161,7 +160,6 @@ public class Events implements Listener {
                                 p.teleport(destination.add(0.5, 1, 0.5));
 
                                 p.playSound(p.getLocation(), Sound.ITEM_CHORUS_FRUIT_TELEPORT, 0.5F, 0.5F);
-                                p.spawnParticle(Particle.DRAGON_BREATH, p.getLocation(), 10);
                             }, 1);
                         }, false);
                     } else {
@@ -204,7 +202,6 @@ public class Events implements Listener {
                             Slimefun.runSync(() ->{
                                 p.teleport(destination.add(0.5, 1, 0.5));
                                 p.playSound(p.getLocation(), Sound.ITEM_CHORUS_FRUIT_TELEPORT, 0.5F, 0.5F);
-                                p.spawnParticle(Particle.DRAGON_BREATH, p.getLocation(), 10);
                             });
                         }
 
