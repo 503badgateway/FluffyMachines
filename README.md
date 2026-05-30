@@ -1,3 +1,29 @@
+# Bug修復
+```
+ [Server thread/WARN]: [FluffyMachines] Task #604711086 for FluffyMachines vBuild 40 (git 7583dd9) generated an exception
+java.lang.IllegalArgumentException: missing required data class java.lang.Float
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:217) ~[guava-33.5.0-jre.jar:?]
+	at org.bukkit.craftbukkit.CraftParticle.createParticleParam(CraftParticle.java:70) ~[paper-1.21.11.jar:1.21.11-131-6d5b910]
+	at org.bukkit.craftbukkit.entity.CraftPlayer.spawnParticle(CraftPlayer.java:2675) ~[paper-1.21.11.jar:1.21.11-131-6d5b910]
+	at org.bukkit.entity.Player.spawnParticle(Player.java:3285) ~[paper-api-1.21.11-R0.1-SNAPSHOT.jar:?]
+	at org.bukkit.entity.Player.spawnParticle(Player.java:3199) ~[paper-api-1.21.11-R0.1-SNAPSHOT.jar:?]
+	at org.bukkit.entity.Player.spawnParticle(Player.java:3121) ~[paper-api-1.21.11-R0.1-SNAPSHOT.jar:?]
+	at org.bukkit.entity.Player.spawnParticle(Player.java:3089) ~[paper-api-1.21.11-R0.1-SNAPSHOT.jar:?]
+	at org.bukkit.entity.Player.spawnParticle(Player.java:3075) ~[paper-api-1.21.11-R0.1-SNAPSHOT.jar:?]
+	at FluffyMachines-Build 40 (git 7583dd9).jar//io.ncbpfluffybear.fluffymachines.utils.Events.lambda$onPlayerWarp$0(Events.java:164) ~[?:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78) ~[paper-1.21.11.jar:1.21.11-131-6d5b910]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474) ~[paper-1.21.11.jar:1.21.11-131-6d5b910]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1756) ~[paper-1.21.11.jar:1.21.11-131-6d5b910]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1611) ~[paper-1.21.11.jar:1.21.11-131-6d5b910]
+	at net.minecraft.server.dedicated.DedicatedServer.tickServer(DedicatedServer.java:427) ~[paper-1.21.11.jar:1.21.11-131-6d5b910]
+	at net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1667) ~[paper-1.21.11.jar:1.21.11-131-6d5b910]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1335) ~[paper-1.21.11.jar:1.21.11-131-6d5b910]
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:388) ~[paper-1.21.11.jar:1.21.11-131-6d5b910]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[?:?]
+```
+問題出現在傳送裝置的粒子上，我只是把產生粒子的代碼刪除掉了
+
+---
 # FluffyMachines 蓬松机器
 
 这些是我随手做的一些机器。我添加了我能想得到的，或是别的附属不想添加的东西。
